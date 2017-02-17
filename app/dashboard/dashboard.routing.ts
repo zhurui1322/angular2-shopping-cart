@@ -29,7 +29,7 @@ export const dashboardRoutes: Routes = [
 					{
 						path: ':username',
 						component: DashboardUserDetailsComponent,
-						canDeactivate: [CanDeactivateGuard];
+						canDeactivate: [CanDeactivateGuard]
 					}
 				]
 			}
