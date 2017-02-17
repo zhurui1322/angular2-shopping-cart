@@ -6,18 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = 'This is the sample message.';
+var AboutSectionComponent = (function () {
+    function AboutSectionComponent() {
     }
-    return AppComponent;
+    return AboutSectionComponent;
 }());
-AppComponent = __decorate([
+AboutSectionComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        styles: ["\n    .active {\n      color: #FFF !important;\n    }\n  "],
-        templateUrl: './app/app.component.html'
+        template: "\n\t\t<h2 class=\"text-center\">About Section</h2>\n\t\t<router-outlet></router-outlet>\n\t"
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], AboutSectionComponent);
+exports.AboutSectionComponent = AboutSectionComponent;
+//# sourceMappingURL=about-section.component.js.map

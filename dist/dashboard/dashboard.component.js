@@ -6,18 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = 'This is the sample message.';
+var DashboardComponent = (function () {
+    function DashboardComponent() {
     }
-    return AppComponent;
+    return DashboardComponent;
 }());
-AppComponent = __decorate([
+DashboardComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        styles: ["\n    .active {\n      color: #FFF !important;\n    }\n  "],
-        templateUrl: './app/app.component.html'
+        template: "\n\t\t<div class=\"jumbotron text-center\">\n\t\t\t<h1>Welcome to the Dashboard</h1>\n\t\t\t\n\t\t\t<a routerLink=\"/dashboard/users\" class=\"btn btn-lg btn-danger\">\n\t\t\t\tManage Users \n\t\t\t</a>\n\t\t</div>\n\t"
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], DashboardComponent);
+exports.DashboardComponent = DashboardComponent;
+//# sourceMappingURL=dashboard.component.js.map

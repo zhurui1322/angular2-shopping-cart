@@ -6,18 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = 'This is the sample message.';
+var AuthGuard = (function () {
+    function AuthGuard() {
     }
-    return AppComponent;
+    AuthGuard.prototype.canActivate = function () {
+        console.log('i am checking to see if you are logged in');
+        return true;
+    };
+    AuthGuard.prototype.canActivateChild = function () {
+        console.log('checking child route access');
+        return true;
+    };
+    return AuthGuard;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        styles: ["\n    .active {\n      color: #FFF !important;\n    }\n  "],
-        templateUrl: './app/app.component.html'
-    })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+AuthGuard = __decorate([
+    core_1.Injectable()
+], AuthGuard);
+exports.AuthGuard = AuthGuard;
+//# sourceMappingURL=auth-guard.service.js.map

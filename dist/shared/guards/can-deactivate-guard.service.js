@@ -6,18 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = 'This is the sample message.';
+var CanDeactivateGuard = (function () {
+    function CanDeactivateGuard() {
     }
-    return AppComponent;
+    CanDeactivateGuard.prototype.canDeactivate = function (component) {
+        return component.canDeactivate ? component.canDeactivate() : true;
+    };
+    return CanDeactivateGuard;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        styles: ["\n    .active {\n      color: #FFF !important;\n    }\n  "],
-        templateUrl: './app/app.component.html'
-    })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+CanDeactivateGuard = __decorate([
+    core_1.Injectable()
+], CanDeactivateGuard);
+exports.CanDeactivateGuard = CanDeactivateGuard;
+//# sourceMappingURL=can-deactivate-guard.service.js.map
