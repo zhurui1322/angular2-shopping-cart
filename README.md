@@ -37,4 +37,4 @@ All the essentials. None of the extras. Takes a lot of cues from the Angular [qu
 
 ## More Production Ready Setup
 
-- Use the [Angular CLI](https://cli.angular.io/)
+- Use the [Angular CLI](https://cli.angular.io/)# angular2-router-sample
