@@ -10,28 +10,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var AboutUserComponent = (function () {
-    function AboutUserComponent(route, router) {
+var product_service_1 = require("../shared/services/product.service");
+var ProductComponent = (function () {
+    function ProductComponent(route, router, service) {
         this.route = route;
         this.router = router;
+        this.service = service;
     }
-    AboutUserComponent.prototype.ngOnInit = function () {
+    ProductComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.data.forEach(function (data) { return _this.user = data.user; });
-        document.body.scrollTop = 0;
+        var name = this.route.snapshot.params['name'];
+        console.log(name);
+        this.service.getProduct(name).then(function (product) { return _this.product = product; });
     };
-    AboutUserComponent.prototype.goBack = function () {
-        this.router.navigate(['/about']);
+    ProductComponent.prototype.goBack = function () {
+        this.router.navigate(['/']);
     };
-    return AboutUserComponent;
+    return ProductComponent;
 }());
-AboutUserComponent = __decorate([
+ProductComponent = __decorate([
     core_1.Component({
         styles: ["\n\t\timg {\n\t\t\tmax-width: 300px;\n\t\t\tmargin: 20px auto;\n\t\t}\n\t"],
-        template: "\n\t\t<a (click)=\"goBack()\" class=\"btn btn-sm btn-info\">Go Back</a>\n\t\t<div class=\"jumbotron text-center\" *ngIf=\"user\">\n\t\t\t<h1> {{ user.name }} ({{ user.username }})</h1>\n\n\t\t\t<img [src]=\"user.avatar\" class=\"img-responsive img-circle\" />\n\t\t</div>\n\t"
+        templateUrl: './app/home/product.component.html',
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute,
-        router_1.Router])
-], AboutUserComponent);
-exports.AboutUserComponent = AboutUserComponent;
-//# sourceMappingURL=about-user.component.js.map
+        router_1.Router,
+        product_service_1.ProductService])
+], ProductComponent);
+exports.ProductComponent = ProductComponent;
+//# sourceMappingURL=product.component.js.map

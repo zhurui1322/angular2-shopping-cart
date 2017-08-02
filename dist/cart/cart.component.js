@@ -9,26 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var userHttp_service_1 = require("./shared/services/userHttp.service");
-require("rxjs/add/operator/map");
-var AppComponent = (function () {
-    function AppComponent(service) {
-        this.service = service;
+var ShoppingCartComponent = (function () {
+    function ShoppingCartComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.service.gettUsers()
-            .subscribe(function (users) { return _this.users = users; });
+    ShoppingCartComponent.prototype.ngOnInit = function () {
+        // let name = this.route.snapshot.params['name'];
+        // console.log(name);
     };
-    return AppComponent;
+    return ShoppingCartComponent;
 }());
-AppComponent = __decorate([
+ShoppingCartComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        styles: ["\n    .active {\n      color: #FFF !important;\n    }\n  "],
-        templateUrl: './app/app.component.html'
+        styles: ["\n\t\timg{\n\t\t\twidth: 100px;\n\t\t\tmargin: 20px auto;\n\t\t}\n\t"],
+        templateUrl: './app/cart/cart.component.html',
     }),
-    __metadata("design:paramtypes", [userHttp_service_1.UserHttpService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [])
+], ShoppingCartComponent);
+exports.ShoppingCartComponent = ShoppingCartComponent;
+//# sourceMappingURL=cart.component.js.map

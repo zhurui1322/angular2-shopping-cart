@@ -30,6 +30,7 @@ export class AboutUserComponent implements OnInit{
 
 	ngOnInit() {
 		this.route.data.forEach((data: { user: User }) => this.user = data.user);
+		document.body.scrollTop = 0;
 	}
 
 	goBack() {

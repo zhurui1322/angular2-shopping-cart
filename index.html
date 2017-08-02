@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>My Angular App!</title>
+    <title>Xiaojuhe.com</title>
 
     <base href="/">
 
     <!-- css -->
     <!-- load bootstrap and some simple css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
     <style>body { padding: 50px 0; }</style>
 
     <!-- js -->
@@ -26,9 +28,29 @@
         System.import('app').catch(function(err) { console.error(err); });
     </script>
 </head>
-<body class="container">
 
-    <my-app></my-app>
-    
+<body class="container" >
+    <div style="min-height: calc(100vh - 70px);">
+        <my-app></my-app>
+    </div>
 </body>
+
+
+
+
+
+<!-- // -->
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<footer>
+    <hr />
+    <div class="text-center center-block">
+        <p class="txt-railway">- Xiaojuhe.com -</p>
+        <br />
+        <a href="#"><i class="fa fa-facebook-square fa-3x social"></i></a>
+        <a href="#"><i class="fa fa-twitter-square fa-3x social"></i></a>
+        <a href="#"><i class="fa fa-google-plus-square fa-3x social"></i></a>
+        <a href="#"><i class="fa fa-envelope-square fa-3x social"></i></a>
+    </div>
+    <hr />
+</footer>
 </html>

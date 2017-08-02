@@ -9,26 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var userHttp_service_1 = require("./shared/services/userHttp.service");
-require("rxjs/add/operator/map");
-var AppComponent = (function () {
-    function AppComponent(service) {
-        this.service = service;
+var UsersComponent = (function () {
+    function UsersComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.service.gettUsers()
-            .subscribe(function (users) { return _this.users = users; });
+    UsersComponent.prototype.ngOnInit = function () {
     };
-    return AppComponent;
+    return UsersComponent;
 }());
-AppComponent = __decorate([
+UsersComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        styles: ["\n    .active {\n      color: #FFF !important;\n    }\n  "],
-        templateUrl: './app/app.component.html'
+        templateUrl: './app/users/users.component.html'
     }),
-    __metadata("design:paramtypes", [userHttp_service_1.UserHttpService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [])
+], UsersComponent);
+exports.UsersComponent = UsersComponent;
+//# sourceMappingURL=users.component.js.map

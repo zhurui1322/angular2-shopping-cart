@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { User } from  '../models/user';
+import { Http, Response, Headers } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+
 
 const usersPromise: Promise<User[]> = Promise.resolve([
 	{
 		id: 1,
 		name: 'Rafa Nadal',
-		username: 'RafaelNadal',
+		username: 'Nomi',
 		avatar: 'https://pbs.twimg.com/profile_images/827193737084334081/FSGGo4KS_400x400.jpg'
 	},
 	{
@@ -18,8 +22,9 @@ const usersPromise: Promise<User[]> = Promise.resolve([
 		id: 3,
 		name: 'Federer',
 		username: 'rogerfederer',
-		avatar: 'https://pbs.twimg.com/profile_images/711961869158711296/IVf9TtGK_400x400.jpg'
-	}
+		avatar: 'https://pbs.twimg.com/profile_images/833104478328877056/8z-8v1Fw_400x400.jpg'
+	},
+
 
 ]);
 
