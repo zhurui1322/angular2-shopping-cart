@@ -39,3 +39,4 @@ All the essentials. None of the extras. Takes a lot of cues from the Angular [qu
 
 - Use the [Angular CLI](https://cli.angular.io/)# angular2-router-sample
 # angular2-shopping-cart
+# angular2-shopping-cart
